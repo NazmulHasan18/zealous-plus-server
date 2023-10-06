@@ -1,0 +1,632 @@
+[
+   {
+      "class_name": "English 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Sophie Dupont",
+         "email": "sophie.dupont@example.com"
+      },
+      "current_students": 25,
+      "total_seats": 30,
+      "schedule": {
+         "start_date": "2023-09-01",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "09:00 AM",
+         "end_time": "10:30 AM",
+         "location": "Room 101"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "English 102",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Hiroshi Tanaka",
+         "email": "hiroshi.tanaka@example.com"
+      },
+      "current_students": 15,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-05",
+         "end_date": "2023-12-18",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "10:00 AM",
+         "end_time": "11:30 AM",
+         "location": "Room 201"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Spanish 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Luisa Fernandez",
+         "email": "luisa.fernandez@example.com"
+      },
+      "current_students": 12,
+      "total_seats": 15,
+      "schedule": {
+         "start_date": "2023-09-04",
+         "end_date": "2023-12-17",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "02:30 PM",
+         "end_time": "04:00 PM",
+         "location": "Room 301"
+      },
+      "status": "pending",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "French 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Anna Petrova",
+         "email": "anna.petrova@example.com"
+      },
+      "current_students": 18,
+      "total_seats": 25,
+      "schedule": {
+         "start_date": "2023-09-03",
+         "end_date": "2023-12-16",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "01:00 PM",
+         "end_time": "02:30 PM",
+         "location": "Room 401"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "German 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Carlos Hernandez",
+         "email": "carlos.hernandez@example.com"
+      },
+      "current_students": 10,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-02",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "09:30 AM",
+         "end_time": "11:00 AM",
+         "location": "Room 501"
+      },
+      "status": "rejected",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Korean 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Seo-Yeon Kim",
+         "email": "seo-yeon.kim@example.com"
+      },
+      "current_students": 22,
+      "total_seats": 30,
+      "schedule": {
+         "start_date": "2023-09-01",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "03:30 PM",
+         "end_time": "05:00 PM",
+         "location": "Room 601"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Arabic 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Mohammed Ahmed",
+         "email": "mohammed.ahmed@example.com"
+      },
+      "current_students": 17,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-05",
+         "end_date": "2023-12-18",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "09:30 AM",
+         "end_time": "11:00 AM",
+         "location": "Room 701"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Italian 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Marta Gonzalez",
+         "email": "marta.gonzalez@example.com"
+      },
+      "current_students": 8,
+      "total_seats": 15,
+      "schedule": {
+         "start_date": "2023-09-04",
+         "end_date": "2023-12-17",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "02:00 PM",
+         "end_time": "03:30 PM",
+         "location": "Room 801"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Russian 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Emma Wilson",
+         "email": "emma.wilson@example.com"
+      },
+      "current_students": 14,
+      "total_seats": 18,
+      "schedule": {
+         "start_date": "2023-09-03",
+         "end_date": "2023-12-16",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "04:30 PM",
+         "end_time": "06:00 PM",
+         "location": "Room 901"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Portuguese 101",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Ricardo Silva",
+         "email": "ricardo.silva@example.com"
+      },
+      "current_students": 10,
+      "total_seats": 12,
+      "schedule": {
+         "start_date": "2023-09-02",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "04:00 PM",
+         "end_time": "05:30 PM",
+         "location": "Room 1001"
+      },
+      "status": "rejected",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "English 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Sophie Dupont",
+         "email": "sophie.dupont@example.com"
+      },
+      "current_students": 28,
+      "total_seats": 30,
+      "schedule": {
+         "start_date": "2023-09-01",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "10:00 AM",
+         "end_time": "11:30 AM",
+         "location": "Room 1101"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "English 202",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Hiroshi Tanaka",
+         "email": "hiroshi.tanaka@example.com"
+      },
+      "current_students": 17,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-05",
+         "end_date": "2023-12-18",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "01:30 PM",
+         "end_time": "03:00 PM",
+         "location": "Room 1201"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Spanish 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Luisa Fernandez",
+         "email": "luisa.fernandez@example.com"
+      },
+      "current_students": 13,
+      "total_seats": 15,
+      "schedule": {
+         "start_date": "2023-09-04",
+         "end_date": "2023-12-17",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "03:00 PM",
+         "end_time": "04:30 PM",
+         "location": "Room 1301"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "French 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Anna Petrova",
+         "email": "anna.petrova@example.com"
+      },
+      "current_students": 21,
+      "total_seats": 25,
+      "schedule": {
+         "start_date": "2023-09-03",
+         "end_date": "2023-12-16",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "03:30 PM",
+         "end_time": "05:00 PM",
+         "location": "Room 1401"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "German 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Carlos Hernandez",
+         "email": "carlos.hernandez@example.com"
+      },
+      "current_students": 19,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-02",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "09:30 AM",
+         "end_time": "11:00 AM",
+         "location": "Room 1501"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Korean 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Seo-Yeon Kim",
+         "email": "seo-yeon.kim@example.com"
+      },
+      "current_students": 24,
+      "total_seats": 30,
+      "schedule": {
+         "start_date": "2023-09-01",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "04:00 PM",
+         "end_time": "05:30 PM",
+         "location": "Room 1601"
+      },
+      "status": "pending",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Arabic 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Mohammed Ahmed",
+         "email": "mohammed.ahmed@example.com"
+      },
+      "current_students": 16,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-05",
+         "end_date": "2023-12-18",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "10:30 AM",
+         "end_time": "12:00 PM",
+         "location": "Room 1701"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Italian 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Marta Gonzalez",
+         "email": "marta.gonzalez@example.com"
+      },
+      "current_students": 11,
+      "total_seats": 15,
+      "schedule": {
+         "start_date": "2023-09-04",
+         "end_date": "2023-12-17",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "01:30 PM",
+         "end_time": "03:00 PM",
+         "location": "Room 1801"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Russian 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Emma Wilson",
+         "email": "emma.wilson@example.com"
+      },
+      "current_students": 13,
+      "total_seats": 18,
+      "schedule": {
+         "start_date": "2023-09-03",
+         "end_date": "2023-12-16",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "05:30 PM",
+         "end_time": "07:00 PM",
+         "location": "Room 1901"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Portuguese 201",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Ricardo Silva",
+         "email": "ricardo.silva@example.com"
+      },
+      "current_students": 9,
+      "total_seats": 12,
+      "schedule": {
+         "start_date": "2023-09-02",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "05:00 PM",
+         "end_time": "06:30 PM",
+         "location": "Room 2001"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "English 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Sophie Dupont",
+         "email": "sophie.dupont@example.com"
+      },
+      "current_students": 28,
+      "total_seats": 30,
+      "schedule": {
+         "start_date": "2023-09-01",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "02:00 PM",
+         "end_time": "03:30 PM",
+         "location": "Room 2101"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "English 302",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Hiroshi Tanaka",
+         "email": "hiroshi.tanaka@example.com"
+      },
+      "current_students": 16,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-05",
+         "end_date": "2023-12-18",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "03:00 PM",
+         "end_time": "04:30 PM",
+         "location": "Room 2201"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Spanish 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Luisa Fernandez",
+         "email": "luisa.fernandez@example.com"
+      },
+      "current_students": 14,
+      "total_seats": 15,
+      "schedule": {
+         "start_date": "2023-09-04",
+         "end_date": "2023-12-17",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "04:30 PM",
+         "end_time": "06:00 PM",
+         "location": "Room 2301"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "French 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Anna Petrova",
+         "email": "anna.petrova@example.com"
+      },
+      "current_students": 20,
+      "total_seats": 25,
+      "schedule": {
+         "start_date": "2023-09-03",
+         "end_date": "2023-12-16",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "06:00 PM",
+         "end_time": "07:30 PM",
+         "location": "Room 2401"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "German 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Carlos Hernandez",
+         "email": "carlos.hernandez@example.com"
+      },
+      "current_students": 19,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-02",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "07:30 PM",
+         "end_time": "09:00 PM",
+         "location": "Room 2501"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Korean 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Seo-Yeon Kim",
+         "email": "seo-yeon.kim@example.com"
+      },
+      "current_students": 26,
+      "total_seats": 30,
+      "schedule": {
+         "start_date": "2023-09-01",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "09:00 AM",
+         "end_time": "10:30 AM",
+         "location": "Room 2601"
+      },
+      "status": "pending",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Arabic 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Mohammed Ahmed",
+         "email": "mohammed.ahmed@example.com"
+      },
+      "current_students": 15,
+      "total_seats": 20,
+      "schedule": {
+         "start_date": "2023-09-05",
+         "end_date": "2023-12-18",
+         "days_of_week": ["Monday", "Wednesday", "Friday"],
+         "start_time": "08:30 AM",
+         "end_time": "10:00 AM",
+         "location": "Room 2701"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Italian 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Marta Gonzalez",
+         "email": "marta.gonzalez@example.com"
+      },
+      "current_students": 13,
+      "total_seats": 15,
+      "schedule": {
+         "start_date": "2023-09-04",
+         "end_date": "2023-12-17",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "03:00 PM",
+         "end_time": "04:30 PM",
+         "location": "Room 2801"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Russian 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Emma Wilson",
+         "email": "emma.wilson@example.com"
+      },
+      "current_students": 12,
+      "total_seats": 18,
+      "schedule": {
+         "start_date": "2023-09-03",
+         "end_date": "2023-12-16",
+         "days_of_week": ["Monday", "Wednesday"],
+         "start_time": "05:00 PM",
+         "end_time": "06:30 PM",
+         "location": "Room 2901"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   },
+   {
+      "class_name": "Portuguese 301",
+      "image": "https://i.ibb.co/g3TCrSg/class1.jpg",
+      "teacher": {
+         "name": "Ricardo Silva",
+         "email": "ricardo.silva@example.com"
+      },
+      "current_students": 9,
+      "total_seats": 12,
+      "schedule": {
+         "start_date": "2023-09-02",
+         "end_date": "2023-12-15",
+         "days_of_week": ["Tuesday", "Thursday"],
+         "start_time": "01:30 PM",
+         "end_time": "03:00 PM",
+         "location": "Room 3001"
+      },
+      "status": "approved",
+      "price": 33,
+      "duration": 6
+   }
+]

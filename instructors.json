@@ -1,0 +1,202 @@
+[
+   {
+      "name": "Sophie Dupont",
+      "email": "sophie.dupont@example.com",
+      "bio": "Hello! My name is Sophie Dupont, a passionate French teacher. I provide interactive lessons that focus on conversation, grammar, and cultural aspects of the French language.",
+      "profile_picture": "https://example.com/instructors/sophie_dupont.jpg",
+      "languages_taught": ["French"],
+      "teaching_experience": 5,
+      "education": "Bachelor's Degree in French Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["14:00-16:00"],
+         "tuesday": ["10:00-12:00", "16:00-18:00"],
+         "wednesday": ["Not available"],
+         "thursday": ["13:00-15:00"],
+         "friday": ["Not available"],
+         "saturday": ["11:00-13:00"],
+         "sunday": ["15:00-17:00"]
+      },
+      "teaching_methodology": "I adopt a communicative approach to teach French, emphasizing practice and oral interaction.",
+      "current_students": 23
+   },
+   {
+      "name": "Hiroshi Tanaka",
+      "email": "hiroshi.tanaka@example.com",
+      "bio": "Hello! My name is Hiroshi Tanaka. I am a dedicated Japanese teacher who provides interactive lessons focusing on conversation, grammar, and cultural aspects of the Japanese language.",
+      "profile_picture": "https://example.com/instructors/hiroshi_tanaka.jpg",
+      "languages_taught": ["Japanese", "English"],
+      "teaching_experience": 8,
+      "education": "Bachelor's Degree in Japanese Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["Not available"],
+         "tuesday": ["13:00-15:00"],
+         "wednesday": ["10:00-12:00", "16:00-18:00"],
+         "thursday": ["Not available"],
+         "friday": ["09:00-11:00"],
+         "saturday": ["14:00-16:00"],
+         "sunday": ["Not available"]
+      },
+      "teaching_methodology": "I use a communicative approach to teaching Japanese, focusing on practical conversation and cultural understanding.",
+      "current_students": 20
+   },
+   {
+      "name": "Luisa Fernandez",
+      "email": "luisa.fernandez@example.com",
+      "bio": "Hello! I'm Luisa Fernandez, a passionate Spanish teacher. I offer interactive lessons that focus on conversation, grammar, and cultural aspects of the Spanish language.",
+      "profile_picture": "https://example.com/instructors/luisa_fernandez.jpg",
+      "languages_taught": ["Spanish", "English"],
+      "teaching_experience": 6,
+      "education": "Bachelor's Degree in Spanish Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["16:00-18:00"],
+         "tuesday": ["Not available"],
+         "wednesday": ["10:00-12:00"],
+         "thursday": ["Not available"],
+         "friday": ["14:00-16:00"],
+         "saturday": ["13:00-15:00"],
+         "sunday": ["Not available"]
+      },
+      "teaching_methodology": "I use a communicative approach to teach Spanish, focusing on practical usage and interactive learning.",
+      "current_students": 21
+   },
+   {
+      "name": "Anna Petrova",
+      "email": "anna.petrova@example.com",
+      "bio": "Hello! I'm Anna Petrova, and I would be happy to teach you Bulgarian. I offer interactive lessons focused on conversation, grammar, and cultural aspects of the Bulgarian language.",
+      "profile_picture": "https://example.com/instructors/anna_petrova.jpg",
+      "languages_taught": ["Bulgarian", "English"],
+      "teaching_experience": 3,
+      "education": "Master's Degree in Bulgarian Philology, Teaching Certification",
+      "availability": {
+         "monday": ["Not available"],
+         "tuesday": ["14:00-16:00"],
+         "wednesday": ["Not available"],
+         "thursday": ["10:00-12:00", "16:00-18:00"],
+         "friday": ["13:00-15:00"],
+         "saturday": ["Not available"],
+         "sunday": ["11:00-13:00"]
+      },
+      "teaching_methodology": "I use a communicative approach to teach Bulgarian, with an emphasis on practice and oral interaction.",
+      "current_students": 22
+   },
+   {
+      "name": "Carlos Hernandez",
+      "email": "carlos.hernandez@example.com",
+      "bio": "Hello! I'm Carlos Hernandez, an enthusiastic Spanish teacher. I offer interactive lessons that focus on conversation, grammar, and cultural aspects of the Spanish language.",
+      "profile_picture": "https://example.com/instructors/carlos_hernandez.jpg",
+      "languages_taught": ["Spanish", "English"],
+      "teaching_experience": 7,
+      "education": "Bachelor's Degree in Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["Not available"],
+         "tuesday": ["16:00-18:00"],
+         "wednesday": ["13:00-15:00"],
+         "thursday": ["Not available"],
+         "friday": ["10:00-12:00"],
+         "saturday": ["Not available"],
+         "sunday": ["14:00-16:00"]
+      },
+      "teaching_methodology": "I adopt a communicative approach to teach Spanish, emphasizing practice and oral interaction.",
+      "current_students": 27
+   },
+   {
+      "name": "Seo-Yeon Kim",
+      "email": "seo-yeon.kim@example.com",
+      "bio": "Hello! I'm Seo-Yeon Kim, a dedicated Korean teacher. I provide interactive lessons that focus on conversation, grammar, and cultural aspects of the Korean language.",
+      "profile_picture": "https://example.com/instructors/seo_yeon_kim.jpg",
+      "languages_taught": ["Korean", "English"],
+      "teaching_experience": 4,
+      "education": "Bachelor's Degree in Korean Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["10:00-12:00"],
+         "tuesday": ["Not available"],
+         "wednesday": ["14:00-16:00"],
+         "thursday": ["13:00-15:00"],
+         "friday": ["Not available"],
+         "saturday": ["11:00-13:00"],
+         "sunday": ["Not available"]
+      },
+      "teaching_methodology": "I use an interactive approach to teaching Korean, focusing on practical usage and cultural understanding.",
+      "current_students": 26
+   },
+   {
+      "name": "Mohammed Ahmed",
+      "email": "mohammed.ahmed@example.com",
+      "bio": "Hello! My name is Mohammed Ahmed, and I am a passionate Arabic teacher. I offer interactive lessons that focus on conversation, grammar, and cultural aspects of the Arabic language.",
+      "profile_picture": "https://example.com/instructors/mohammed_ahmed.jpg",
+      "languages_taught": ["Arabic", "English"],
+      "teaching_experience": 7,
+      "education": "Bachelor's Degree in Arabic Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["14:00-16:00"],
+         "tuesday": ["10:00-12:00", "16:00-18:00"],
+         "wednesday": ["Not available"],
+         "thursday": ["13:00-15:00"],
+         "friday": ["Not available"],
+         "saturday": ["11:00-13:00"],
+         "sunday": ["15:00-17:00"]
+      },
+      "teaching_methodology": "I adopt a communicative approach to teaching Arabic, emphasizing its practical usage and real-life situations.",
+      "current_students": 25
+   },
+   {
+      "name": "Marta Gonzalez",
+      "email": "marta.gonzalez@example.com",
+      "bio": "Hello! I'm Marta Gonzalez, a dedicated Spanish teacher. I offer interactive lessons that focus on conversation, grammar, and cultural aspects of the Spanish language.",
+      "profile_picture": "https://example.com/instructors/marta_gonzalez.jpg",
+      "languages_taught": ["Spanish", "English"],
+      "teaching_experience": 9,
+      "education": "Master's Degree in Spanish Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["10:00-12:00", "15:00-17:00"],
+         "tuesday": ["Not available"],
+         "wednesday": ["14:00-16:00"],
+         "thursday": ["13:00-15:00"],
+         "friday": ["Not available"],
+         "saturday": ["11:00-13:00"],
+         "sunday": ["Not available"]
+      },
+      "teaching_methodology": "I use a communicative approach to teach Spanish, focusing on practical conversation and cultural understanding.",
+      "current_students": 24
+   },
+   {
+      "name": "Emma Wilson",
+      "email": "emma.wilson@example.com",
+      "bio": "Hello! I'm Emma Wilson, a passionate English teacher. I provide interactive lessons that focus on conversation, grammar, and cultural aspects of the English language.",
+      "profile_picture": "https://example.com/instructors/emma_wilson.jpg",
+      "languages_taught": ["English"],
+      "teaching_experience": 6,
+      "education": "Bachelor's Degree in English Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["14:00-16:00"],
+         "tuesday": ["10:00-12:00", "16:00-18:00"],
+         "wednesday": ["Not available"],
+         "thursday": ["13:00-15:00"],
+         "friday": ["Not available"],
+         "saturday": ["11:00-13:00"],
+         "sunday": ["15:00-17:00"]
+      },
+      "teaching_methodology": "I adopt a communicative approach to teaching English, emphasizing practical usage and real-life situations.",
+      "current_students": 28
+   },
+   {
+      "name": "Ricardo Silva",
+      "email": "ricardo.silva@example.com",
+      "bio": "Hello! I'm Ricardo Silva, a dedicated Portuguese teacher. I offer interactive lessons that focus on conversation, grammar, and cultural aspects of the Portuguese language.",
+      "profile_picture": "https://example.com/instructors/ricardo_silva.jpg",
+      "languages_taught": ["Portuguese", "English"],
+      "teaching_experience": 5,
+      "education": "Bachelor's Degree in Portuguese Language and Literature, Teaching Certification",
+      "availability": {
+         "monday": ["10:00-12:00"],
+         "tuesday": ["Not available"],
+         "wednesday": ["14:00-16:00"],
+         "thursday": ["13:00-15:00"],
+         "friday": ["Not available"],
+         "saturday": ["11:00-13:00"],
+         "sunday": ["Not available"]
+      },
+      "teaching_methodology": "I use a communicative approach to teach Portuguese, focusing on practical usage and cultural understanding.",
+      "current_students": 29
+   }
+]
