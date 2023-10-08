@@ -29,20 +29,30 @@ app.use(express.json());
 // };
 
 const jwtVerify = (req, res, next) => {
-   console.log("hit");
    const authorization = req.headers.authorization;
    if (!authorization) {
       return res.status(401).send({ error: true, message: "No authorization Token" });
    }
    const token = authorization.split(" ")[1];
+   // console.log(token);
 
-   jwt.verify(token, process.env.PRIVATE_KEY, (err, decoded) => {
-      if (err) {
-         return res.status(401).send({ error: true, message: "Unauthorized User" });
-      }
+   // jwt.verify(token, process.env.PRIVATE_KEY, (err, decoded) => {
+   //    if (err) {
+   //       console.log(err);
+   //       return res.status(401).send({ error: true, message: "Unauthorized User" });
+   //    }
+   //    req.email = decoded.user.email;
+   //    next();
+   // });
+   try {
+      let decoded = jwt.verify(token, process.env.PRIVATE_KEY);
+
       req.email = decoded.user.email;
       next();
-   });
+   } catch (err) {
+      // console.log("here:", err);
+      return res.status(401).send({ error: true, message: "Invalid Token" });
+   }
 };
 
 // mongoDB starts Here
@@ -81,7 +91,10 @@ async function run() {
 
       app.post("/jwt", (req, res) => {
          const user = req.body;
-         const token = jwt.sign({ user }, process.env.PRIVATE_KEY, { expiresIn: "1h" });
+         const token = jwt.sign({ user }, process.env.PRIVATE_KEY, {
+            expiresIn: "24h",
+         });
+
          res.send(token);
       });
 
@@ -107,8 +120,11 @@ async function run() {
          res.send(result);
       });
 
+      app.put("/users/:id", jwtVerify, async (req, res) => {});
+
       app.get("/user/:email", jwtVerify, async (req, res) => {
          const email = req.params.email;
+         // console.log(email);
          if (email !== req.email) {
             return res.status(403).send({ error: true, message: "Forbidden access" });
          }
@@ -118,18 +134,36 @@ async function run() {
 
       app.patch("/user/:id", jwtVerify, async (req, res) => {
          const id = req.params.id;
-         const role = req.body;
+         const { role, user_image, name } = req.body;
          const email = req.query.email;
          if (email !== req.email) {
             return res.status(403).send({ error: true, message: "Forbidden access" });
          }
-         const updateDoc = {
-            $set: {
-               role: role.role,
-            },
-         };
-         const result = await userCollection.updateOne({ _id: new ObjectId(id) }, updateDoc);
-         res.send(result);
+         if (role) {
+            const updateDoc = {
+               $set: {
+                  role: role.role,
+               },
+            };
+            const result = await userCollection.updateOne({ _id: new ObjectId(id) }, updateDoc);
+            res.send(result);
+         } else if (user_image) {
+            const updateDoc = {
+               $set: {
+                  user_image: user_image,
+               },
+            };
+            const result = await userCollection.updateOne({ _id: new ObjectId(id) }, updateDoc);
+            res.send(result);
+         } else if (name) {
+            const updateDoc = {
+               $set: {
+                  name: name,
+               },
+            };
+            const result = await userCollection.updateOne({ _id: new ObjectId(id) }, updateDoc);
+            res.send(result);
+         }
       });
 
       // !for student classes
