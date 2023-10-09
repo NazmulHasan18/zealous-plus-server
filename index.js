@@ -347,6 +347,12 @@ async function run() {
          res.send(result);
       });
 
+      app.get("/class/:id", async (req, res) => {
+         const id = req.params.id;
+         const findClass = await classCollection.findOne({ _id: new ObjectId(id) });
+         res.send(findClass);
+      });
+
       app.patch("/classes", jwtVerify, async (req, res) => {
          const { classes } = req.body;
          const objectIds = classes.map((classs) => new ObjectId(classs.class_id));
