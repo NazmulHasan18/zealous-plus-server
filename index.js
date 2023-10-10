@@ -142,7 +142,7 @@ async function run() {
          if (role) {
             const updateDoc = {
                $set: {
-                  role: role.role,
+                  role: role,
                },
             };
             const result = await userCollection.updateOne({ _id: new ObjectId(id) }, updateDoc);
@@ -347,7 +347,7 @@ async function run() {
          res.send(result);
       });
 
-      app.get("/class/:id", async (req, res) => {
+      app.get("/class/:id", jwtVerify, async (req, res) => {
          const id = req.params.id;
          const findClass = await classCollection.findOne({ _id: new ObjectId(id) });
          res.send(findClass);
