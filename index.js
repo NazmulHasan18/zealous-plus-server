@@ -3,13 +3,16 @@ const app = express();
 const cors = require("cors");
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 const port = process.env.PORT || 5000;
 
 // middleware for server
 dotenv.config();
+const Razorpay = require("razorpay");
 const stripe = require("stripe")(process.env.API_SECRET_KEY);
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // const jwtVerify = (req, res, next) => {
 //    const token = req.header("Authorization");
@@ -217,25 +220,70 @@ async function run() {
       });
 
       // !Payment for student
+      let razorPayInstance = new Razorpay({
+         key_id: process.env.KEY_ID,
+         key_secret: process.env.KEY_SECRET,
+      });
 
-      app.post("/create-payment-intent", jwtVerify, async (req, res) => {
+      app.get("/get-key", (req, res) => {
+         const key = process.env.KEY_ID;
+         res.send({ key });
+      });
+
+      app.post("/create-orderId", async (req, res) => {
          const { price } = req.body;
          const amount = parseInt(price * 100);
-         const paymentIntent = await stripe.paymentIntents.create({
-            amount: amount,
-            currency: "usd",
-            payment_method_types: ["card"],
+
+         const options = {
+            amount: amount, // amount in the smallest currency unit
+            currency: "INR",
+            receipt: crypto.randomBytes(10).toString("hex"),
+         };
+         razorPayInstance.orders.create(options, function (err, order) {
+            res.status(200).send(order);
+            if (err) {
+               res.status(500).send({ err, message: "payment error" });
+            }
          });
-         res.send({
-            clientSecret: paymentIntent.client_secret,
-         });
+      });
+      app.post("/checkout", async (req, res) => {
+         const { name, email, id, razorpay_payment_id, razorpay_order_id, razorpay_signature, classes } =
+            req.body;
+
+         const generated_signature = crypto
+            .createHmac("sha256", process.env.KEY_SECRET)
+            .update((razorpay_order_id + "|" + razorpay_payment_id).toString())
+            .digest("hex");
+
+         if (generated_signature == razorpay_signature) {
+            const paymentInfo = {
+               user: {
+                  name,
+                  email,
+               },
+               transaction: {
+                  razorpay_payment_id,
+                  razorpay_order_id,
+                  razorpay_signature,
+               },
+               ids: [id],
+               classes,
+            };
+
+            const result = await paymentCollection.insertOne(paymentInfo);
+            console.log(result, paymentInfo);
+            res.send({ success: true, message: "payment success", result });
+         } else {
+            console.log("also working");
+            res.send({ success: false, message: "payment failed" });
+         }
       });
 
-      app.get("/payments/:email", jwtVerify, async (req, res) => {
-         const email = req.params.email;
-         const result = await paymentCollection.find({ "user.email": email }).sort({ _id: -1 }).toArray();
-         res.send(result);
-      });
+      // app.get("/payments/:email", jwtVerify, async (req, res) => {
+      //    const email = req.params.email;
+      //    const result = await paymentCollection.find({ "user.email": email }).sort({ _id: -1 }).toArray();
+      //    res.send(result);
+      // });
 
       // !instructor
 
