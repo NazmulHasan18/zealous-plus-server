@@ -89,6 +89,7 @@ async function run() {
       const reviewCollection = zealousPlusDB.collection("reviews");
       const paymentCollection = zealousPlusDB.collection("payments");
       const bookedClassCollection = zealousPlusDB.collection("bookedClasses");
+      const teachersClassesCollection = zealousPlusDB.collection("teachersClasses");
 
       // !jwt token create and post
 
@@ -175,7 +176,8 @@ async function run() {
          const { classes } = req.body;
          const objectIds = classes.map((classs) => new ObjectId(classs._id));
          const paidClasses = await bookedClassCollection.find({ _id: { $in: objectIds } }).toArray();
-
+         paidClasses[0].status = "paid";
+         console.log(paidClasses);
          const result = await studentClassCollection.insertMany(paidClasses, { ordered: true });
 
          res.send(result);
@@ -217,6 +219,31 @@ async function run() {
          }
          const result = await bookedClassCollection.deleteOne({ _id: new ObjectId(id) });
          res.send(result);
+      });
+
+      app.get("/my_class/:id", jwtVerify, async (req, res) => {
+         const id = req.params.id;
+         const email = req.query.email;
+
+         if (email !== req.email) {
+            return res.status(403).send({ error: true, message: "Forbidden access" });
+         }
+         const result = await studentClassCollection.findOne({ _id: new ObjectId(id) });
+         res.send(result);
+      });
+
+      app.get("/class_list", jwtVerify, async (req, res) => {
+         const teacherEmail = req.query.email;
+         const className = req.query.name;
+         const query = {
+            $and: [{ teacherEmail: teacherEmail }, { class_name: className }],
+         };
+         const result = await teachersClassesCollection.find(query).toArray();
+         if (!result) {
+            res.send({ message: "Nothing found" });
+         } else {
+            res.send(result);
+         }
       });
 
       // !Payment for student
