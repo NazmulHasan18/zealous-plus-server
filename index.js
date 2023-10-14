@@ -90,6 +90,7 @@ async function run() {
       const paymentCollection = zealousPlusDB.collection("payments");
       const bookedClassCollection = zealousPlusDB.collection("bookedClasses");
       const teachersClassesCollection = zealousPlusDB.collection("teachersClasses");
+      const couponCollection = zealousPlusDB.collection("coupon");
 
       // !jwt token create and post
 
@@ -306,11 +307,13 @@ async function run() {
          }
       });
 
-      // app.get("/payments/:email", jwtVerify, async (req, res) => {
-      //    const email = req.params.email;
-      //    const result = await paymentCollection.find({ "user.email": email }).sort({ _id: -1 }).toArray();
-      //    res.send(result);
-      // });
+      app.get("/coupon/:coupon", jwtVerify, async (req, res) => {
+         const coupon = req.params.coupon;
+         const result = await couponCollection.findOne({ coupon });
+         if (result) {
+            res.send(result);
+         } else res.status(400).send({ error: true, message: "Coupon not found" });
+      });
 
       // !instructor
 
